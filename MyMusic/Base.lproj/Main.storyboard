@@ -28,7 +28,7 @@
                                 <rect key="frame" x="32.5" y="178.5" width="150" height="150"/>
                                 <state key="normal" image="cymbal"/>
                                 <connections>
-                                    <action selector="cymbal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHS-dB-g7Q"/>
+                                    <action selector="cymba:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akk-NI-wgc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-gF-rwR">
