@@ -32,13 +32,16 @@ class ViewController: UIViewController {
   
   @IBAction func cymba(_ sender: Any) {
     //_省略されている
-    do{
+    soundPlayer(&cymbalPiayer, path: cymbalpath, count: 0)
+    
+ /*   do{
       cymbalPiayer = try AVAudioPlayer(contentsOf: cymbalpath, fileTypeHint: nil)
       cymbalPiayer.play()
     } catch {
       print("シンバルでエラーが発生しました！")
       //AVAudioPlayer 例外が発生しやすいので、例外処理を記述しないといけない
     }
+ */
   }
   
   // ギター
@@ -47,12 +50,15 @@ class ViewController: UIViewController {
   var guitarPlayer = AVAudioPlayer()
   
   @IBAction func guitar(_ sender: Any) {
-    do {
-      guitarPlayer = try AVAudioPlayer(contentsOf: guitarPath, fileTypeHint: nil)
+    soundPlayer(&guitarPlayer, path: guitarPath, count: 0)
+ 
+    /*  do {
+     guitarPlayer = try AVAudioPlayer(contentsOf: guitarPath, fileTypeHint: nil)
       guitarPlayer.play()
     } catch {
       print("ギターでエラーが発生しました！")
     }
+     */
   }
   
   //バックミュージック
@@ -61,7 +67,9 @@ class ViewController: UIViewController {
   var backmusicPlayer = AVAudioPlayer()
 		
   @IBAction func play(_ sender: Any) {
-    do {
+    soundPlayer(&backmusicPlayer, path: backmusicPath, count: -1)
+    
+ /*   do {
       backmusicPlayer = try AVAudioPlayer(contentsOf: backmusicPath, fileTypeHint: nil)
       
       //リピート設定（−１＝無限）
@@ -70,6 +78,7 @@ class ViewController: UIViewController {
     }catch {
       print("エラーが発生しました！")
     }
+ */
   }
   
   //STOP
@@ -87,8 +96,6 @@ class ViewController: UIViewController {
     }
     
   }
-  
-  
 }
 
 
