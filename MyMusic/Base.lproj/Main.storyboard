@@ -26,9 +26,13 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g5-Lt-i2O">
                                 <rect key="frame" x="32.5" y="178.5" width="150" height="150"/>
+                                <gestureRecognizers/>
                                 <state key="normal" image="cymbal"/>
                                 <connections>
                                     <action selector="cymba:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akk-NI-wgc"/>
+                                    <outletCollection property="gestureRecognizers" destination="hTe-su-pLd" appends="YES" id="QHk-dV-bwu"/>
+                                    <outletCollection property="gestureRecognizers" destination="hTe-su-pLd" appends="YES" id="hom-hX-dWW"/>
+                                    <outletCollection property="gestureRecognizers" destination="21x-Cr-tzB" appends="YES" id="otM-Yb-ZOJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-gF-rwR">
@@ -75,8 +79,13 @@
                             <constraint firstItem="vig-21-xWa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="uCb-Ij-E19"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="bg" destination="fbt-fT-OPT" collectionClass="NSMutableArray" id="nvj-ur-cti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hTe-su-pLd"/>
+                <tapGestureRecognizer id="21x-Cr-tzB"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>

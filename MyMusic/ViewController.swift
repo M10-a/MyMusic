@@ -12,12 +12,27 @@ import AVFoundation
 
 
 class ViewController: UIViewController {
+  let chdir: UIButton = UIButton()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view,
+    
+    UIView.animate(withDuration: 1.0, delay: 0.0, options: .repeat, animations: {
+      self.chdir.center.y += 100.0
+    }, completion: nil)
+    
+    UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: .repeat, animations: {
+      self.guitar.center.y += 100.0
+      self.guitar.bounds.size.height += 30.0
+      self.guitar.bounds.size.width += 30.0
+    }) { _ in
+      self.guitar.center.y -= 100.0
+      self.guitar.bounds.size.height -= 30.0
+      self.guitar.bounds.size.width -= 30.0
+    
   }
-  
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -42,6 +57,7 @@ class ViewController: UIViewController {
       //AVAudioPlayer 例外が発生しやすいので、例外処理を記述しないといけない
     }
  */
+    
   }
   
   // ギター
@@ -59,6 +75,7 @@ class ViewController: UIViewController {
       print("ギターでエラーが発生しました！")
     }
      */
+    
   }
   
   //バックミュージック
@@ -68,6 +85,7 @@ class ViewController: UIViewController {
 		
   @IBAction func play(_ sender: Any) {
     soundPlayer(&backmusicPlayer, path: backmusicPath, count: -1)
+    
     
  /*   do {
       backmusicPlayer = try AVAudioPlayer(contentsOf: backmusicPath, fileTypeHint: nil)
@@ -80,6 +98,7 @@ class ViewController: UIViewController {
     }
  */
   }
+  @IBOutlet var bg: [UIImageView]!
   
   //STOP
   @IBAction func stop(_ sender: Any) {
